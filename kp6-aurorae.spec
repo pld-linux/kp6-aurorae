@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qt_ver		6.8.0
 %define		kpname		aurorae
 
 Summary:	A themeable window decoration for KWin
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	3a682d875958fd4095f086dc0d93d964
+# Source0-md5:	19c627d26d469760cdce04d45afca45d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Gui-devel >= %{qt_ver}
 BuildRequires:	gettext-tools
@@ -61,17 +61,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README TODO theme-description
 %{_libdir}/cmake/Aurorae
-%attr(755,root,root) %{_libdir}/qt6/plugins/org.kde.kdecoration3.kcm/kcm_auroraedecoration.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/org.kde.kdecoration3/org.kde.kwin.aurorae.so
+%{_libdir}/qt6/plugins/org.kde.kdecoration3.kcm/kcm_auroraedecoration.so
+%{_libdir}/qt6/plugins/org.kde.kdecoration3/org.kde.kwin.aurorae.so
 %dir %{_libdir}/qt6/qml/org/kde/kwin/decoration
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/AppMenuButton.qml
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/ButtonGroup.qml
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/Decoration.qml
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/DecorationButton.qml
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/MenuButton.qml
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kwin/decoration/libdecorationplugin.so
+%{_libdir}/qt6/qml/org/kde/kwin/decoration/libdecorationplugin.so
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/qmldir
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/kwin/decorations/plastik/libplastikplugin.so
+%{_libdir}/qt6/qml/org/kde/kwin/decorations/plastik/libplastikplugin.so
 %dir %{_libdir}/qt6/qml/org/kde/kwin/decorations
 %dir %{_libdir}/qt6/qml/org/kde/kwin/decorations/plastik
 %{_libdir}/qt6/qml/org/kde/kwin/decorations/plastik/qmldir
