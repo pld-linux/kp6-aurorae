@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.6.3
+%define		kdeplasmaver	6.6.4
 %define		qt_ver		6.8.0
 %define		kpname		aurorae
 
 Summary:	A themeable window decoration for KWin
 Name:		kp6-%{kpname}
-Version:	6.6.3
-Release:	2
+Version:	6.6.4
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	b98cb63b0c27cac61b466e9d30045135
+# Source0-md5:	02964cf5e6fb82bf02f6d4934d1cb827
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Gui-devel >= %{qt_ver}
 BuildRequires:	gettext-tools
