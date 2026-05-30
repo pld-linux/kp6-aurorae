@@ -31,6 +31,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Aurorae is a themeable window decoration for KWin.
 
+%description -l pl.UTF-8
+Aurorae jest systemem dekoracji okien dla KWin.
+
 %prep
 %setup -q -n %{kpname}-%{version}
 
