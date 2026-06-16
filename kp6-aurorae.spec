@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.6.5
+%define		kdeplasmaver	6.7.0
 %define		qt_ver		6.8.0
 %define		kpname		aurorae
 
 Summary:	A themeable window decoration for KWin
 Name:		kp6-%{kpname}
-Version:	6.6.5
+Version:	6.7.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	4aa315479ff61033268e479f8049b53e
+# Source0-md5:	b2df40d0670d31e559264b0bcc0fca87
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Gui-devel >= %{qt_ver}
 BuildRequires:	gettext-tools
@@ -73,6 +73,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/Decoration.qml
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/DecorationButton.qml
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/MenuButton.qml
+%{_libdir}/qt6/qml/org/kde/kwin/decoration/decorationplugin.qmltypes
+%{_libdir}/qt6/qml/org/kde/kwin/decoration/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/libdecorationplugin.so
 %{_libdir}/qt6/qml/org/kde/kwin/decoration/qmldir
 %{_libdir}/qt6/qml/org/kde/kwin/decorations/plastik/libplastikplugin.so
