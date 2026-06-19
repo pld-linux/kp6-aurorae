@@ -8,13 +8,14 @@
 Summary:	A themeable window decoration for KWin
 Name:		kp6-%{kpname}
 Version:	6.7.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
 # Source0-md5:	b2df40d0670d31e559264b0bcc0fca87
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Gui-devel >= %{qt_ver}
+BuildRequires:	Qt6Quick-devel >= %{qt_ver}
 BuildRequires:	gettext-tools
 BuildRequires:	kf6-extra-cmake-modules >= 6.14.0
 BuildRequires:	kf6-kcmutils-devel >= 6.14.0
