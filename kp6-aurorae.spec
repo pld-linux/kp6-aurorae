@@ -2,7 +2,8 @@
 # Conditional build:
 %bcond_with	tests		# build with tests
 %define		kdeplasmaver	6.7.4
-%define		qt_ver		6.8.0
+%define		kfver		6.26.0
+%define		qt_ver		6.10.0
 %define		kpname		aurorae
 
 Summary:	A themeable window decoration for KWin
@@ -14,19 +15,29 @@ Group:		X11/Applications
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
 # Source0-md5:	e3117b48474022601917b1643f629656
 URL:		http://www.kde.org/
+BuildRequires:	Qt6Core-devel >= %{qt_ver}
+BuildRequires:	Qt6DBus-devel >= %{qt_ver}
 BuildRequires:	Qt6Gui-devel >= %{qt_ver}
 BuildRequires:	Qt6Quick-devel >= %{qt_ver}
 BuildRequires:	Qt6UiTools-devel >= %{qt_ver}
+BuildRequires:	Qt6Widgets-devel >= %{qt_ver}
+BuildRequires:	cmake >= 3.16
 BuildRequires:	gettext-tools
-BuildRequires:	kf6-extra-cmake-modules >= 6.14.0
-BuildRequires:	kf6-kcmutils-devel >= 6.14.0
-BuildRequires:	kf6-kcolorscheme-devel >= 6.15.0
-BuildRequires:	kf6-kconfig-devel >= 6.14.0
-BuildRequires:	kf6-kcoreaddons-devel >= 6.15.0
-BuildRequires:	kf6-ki18n-devel >= 6.14.0
-BuildRequires:	kf6-knewstuff-devel >= 6.14.0
-BuildRequires:	kf6-kpackage-devel >= 6.14.0
-BuildRequires:	kp6-kdecoration-devel >= %{kdeplasmaver}
+BuildRequires:	kf6-extra-cmake-modules >= %{kfver}
+BuildRequires:	kf6-kcmutils-devel >= %{kfver}
+BuildRequires:	kf6-kcolorscheme-devel >= %{kfver}
+BuildRequires:	kf6-kconfig-devel >= %{kfver}
+BuildRequires:	kf6-kcoreaddons-devel >= %{kfver}
+BuildRequires:	kf6-ki18n-devel >= %{kfver}
+BuildRequires:	kf6-knewstuff-devel >= %{kfver}
+BuildRequires:	kf6-kpackage-devel >= %{kfver}
+BuildRequires:	kf6-ksvg-devel >= %{kfver}
+BuildRequires:	kp6-kdecoration-devel >= 6.7.0
+BuildRequires:	libstdc++-devel >= 6:11
+BuildRequires:	ninja
+BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 %requires_eq_to Qt6Core Qt6Core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
